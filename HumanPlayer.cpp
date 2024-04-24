@@ -15,9 +15,7 @@ int HumanPlayer::move(Board& board)
 {
     int move;
     string temp;
-    while (true)
-    {
-        if (getSymbol() == 'X')
+   if (getSymbol() == 'X')
             cout << "Toi luot nguoi choi " << BOLDGREEN << getSymbol() << RESET << endl;
         else if (getSymbol() == 'O')
             cout << "Toi luot nguoi choi " << BOLDRED << getSymbol() << RESET << endl;
@@ -57,7 +55,7 @@ int HumanPlayer::move(Board& board)
                 cout << "So ban chon nam ngoai pham vi (1->9). Vui long chon lai: ";
             }
         }
-    }
+    
 }
 void HumanPlayer::winner()
 {
