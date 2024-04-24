@@ -26,7 +26,7 @@ int HumanPlayer::move(Board& board)
             bool flag = true;
             for (int i = 0; i < temp.size(); i++)
             {
-                if (temp[i] <= '0' || temp[i] > '9')
+                if (temp[i] <= '0' || temp[i] > '9' || temp.size() > 1)
                 {
                     cout << "So ban chon nam ngoai pham vi (1->9). Vui long chon lai: ";
                     flag = false;
@@ -55,7 +55,6 @@ int HumanPlayer::move(Board& board)
                 cout << "So ban chon nam ngoai pham vi (1->9). Vui long chon lai: ";
             }
         }
-    
 }
 void HumanPlayer::winner()
 {
