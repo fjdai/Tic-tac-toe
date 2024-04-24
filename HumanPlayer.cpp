@@ -1,4 +1,4 @@
-#include "Player.h"
+﻿#include "Player.h"
 #include "HumanPlayer.h"
 #include <string>
 #include <iostream>
@@ -24,11 +24,11 @@ int HumanPlayer::move(Board& board)
         cout << "Nhap so ban muon chon : ";
 
         while (cin >> temp)
-        {
+        {   
             bool flag = true;
-            for (char x : temp)
+            for (int i = 0; i < temp.size(); i++)
             {
-                if (!isdigit(x))
+                if (temp[i] <= '0' || temp[i] > '9')
                 {
                     cout << "So ban chon nam ngoai pham vi (1->9). Vui long chon lai: ";
                     flag = false;
